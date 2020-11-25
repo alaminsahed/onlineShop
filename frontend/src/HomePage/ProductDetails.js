@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { Button, Col, Image, ListGroup, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import Rating from "../Component/Rating/Rating";
-import data from "../data";
+import axios from "axios";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = data.find((p) => p._id === id);
+  const [product, setProduct] = useState({});
+  useEffect(()=>{
+    const fetchProducts = async()=>{
+     await axios.get(`/api/products/${id}`)
+     .then(res=> setProduct(res.data));
+    }
+    fetchProducts();
+},[])
+
   return (
     <div>
       <Link to="/">Go Back</Link>
