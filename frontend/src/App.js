@@ -21,7 +21,7 @@ const App = () => {
       <main className="py-3">
       <Switch>
       <Route path='/' component={HomePage} exact/>
-      <Route path='/product/:id' component={ProductDetails}/>
+      <Route path='/products/:id' component={ProductDetails}/>
       </Switch>
       </main>
       </Container>

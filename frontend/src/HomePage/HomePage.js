@@ -17,7 +17,7 @@ const HomePage = () => {
     // console.log(products);
     return (
         <div>
-           <marquee><h1>New Arrival</h1></marquee> 
+           <marquee><h1 style={{color:"white"}}>New Arrival</h1></marquee> 
            <Row>
                 {products.map((product)=>(
                     <Col sm={12} md={6} lg={4} xl={3}>

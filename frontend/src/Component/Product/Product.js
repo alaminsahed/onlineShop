@@ -9,11 +9,11 @@ const Product = (props) => {
   return (
     <div>
       <Card className="my-3 p-3 rounded">
-        <Link to={`/product/${_id}`}>
+        <Link to={`/products/${_id}`}>
           <Card.Img src={image} variant="top" />
         </Link>
         <Card.Body>
-          <Link to={`/product/${_id}`}>
+          <Link to={`/products/${_id}`}>
             <Card.Title as="div">
               <h5 className="product-name">{name}</h5>
             </Card.Title>
