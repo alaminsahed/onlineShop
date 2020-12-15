@@ -1,5 +1,9 @@
 .product-name:hover{
-    color:blue !important;
+    color: blue;
+}
+
+.product-name{
+    color: black;
 }
 
 div .rounded{

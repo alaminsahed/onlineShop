@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import Product from '../Component/Product/Product.js';
 import axios from 'axios';
 
+
 const HomePage = () => {
     const [products,setProducts] = useState([]);
 
@@ -30,6 +31,7 @@ const HomePage = () => {
                 )}
          
            </Row>
+           
         </div>
     );
 };
