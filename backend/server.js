@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 
 import ProductRoute from './Routes/ProductsRoute.js';
 
+import {notFound,errorHandler} from './MiddleWare/ErrorMiddlewire.js';
+
 const app = express();
 dotenv.config();
 connectionDB();
@@ -14,19 +16,9 @@ app.get('/',(req,res)=>{
 
 app.use('/api/products', ProductRoute)
 
-app.use((req,res,next)=>{
-    const error = new Error(`Not Found- ${req.originalUrl}`)
-    next(error)
-})
+app.use(notFound)
 
-app.use((err,req,res,next) =>{
-    const statusCode = res.statusCode === 200? 500 : res.statusCode
-    res.status(statusCode)
-    res.json({
-        message: err.message,
-        stack: process.env.NODE_ENV === 'production'? null : err.stack
-    })
-})
+app.use(errorHandler)
 
 // app.get('/api/products',(req,res)=>{
 //     res.json(products);
