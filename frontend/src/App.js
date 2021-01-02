@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import CartScreen from './HomePage/CartScreen';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       <Switch>
       <Route path='/' component={HomePage} exact/>
       <Route path='/products/:id' component={ProductDetails}/>
+      <Route path= '/cart/:id?' component={CartScreen}/>
       </Switch>
       </main>
       </Container>
