@@ -30,8 +30,6 @@ userSchema.methods.matchPassword = async function (enteredPassword){
     return await bcrypt.compare(enteredPassword, this.password);
 }
 
-<<<<<<< Updated upstream
-=======
 // hasing the password using middle ware in schema
 
 userSchema.pre('save', async function(next)
@@ -45,7 +43,6 @@ userSchema.pre('save', async function(next)
 }
 )
 
->>>>>>> Stashed changes
 const User = mongoose.model('User', userSchema);
 
 export default User;
