@@ -11,6 +11,7 @@ import {
   Link
 } from "react-router-dom";
 import CartScreen from './HomePage/CartScreen';
+import LoginScreen from './HomePage/LoginScreen';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <Container>
       <main className="py-3">
       <Switch>
+      <Route path='/login' component={LoginScreen}/>
       <Route path='/' component={HomePage} exact/>
       <Route path='/products/:id' component={ProductDetails}/>
       <Route path= '/cart/:id?' component={CartScreen}/>
