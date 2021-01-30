@@ -99,7 +99,7 @@ export const userListReducer = (state = { users: [] }, action) => {
       return { users: [] }
     default:
       return state
-  }
+  } 
 }
 
 export const userDeleteReducer = (state = {}, action) => {
