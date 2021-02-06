@@ -114,3 +114,10 @@ header{
     background-color: grey;
     color: white;
 }
+
+/* order screen */
+
+.order-id{
+    background-color: rgb(19, 231, 125);
+    padding: 10px;
+}
