@@ -1,16 +1,42 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React from 'react';
+import css from './css/Nav.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <Container>
-        <Row>
-          <Col className='text-center py-3'>Copyright &copy; ProShop</Col>
-        </Row>
-      </Container>
-    </footer>
-  )
-}
+    <div className="bg-light footer">
+     <br/>
+    <div className="container" style={{color:"black"}}>
+    <div className="row">
+      <div className="col">
+      <h3 >Information</h3>
+      <a href="/" style={{color:"black"}}>Contact us</a><br/>
+      <a href="/" style={{color:"black"}}>About Us</a><br/>
+      
+      </div>
+      <div className="col">
+      <h3 >Terms & Conditions</h3>
+     
+      <a href="/" style={{color:"black"}}>Privacy & Terms</a><br/>
+      <a href="/" style={{color:"black"}}>Product Return Terms</a><br/>
+     
+      </div>
+      <div className="col">
+      <h3 >Contact</h3>
+      
+      <a href="/" style={{color:"black"}}>Email : onlinesp@gmail.com</a><br/>
+      <a href="/" style={{color:"black"}}>Send Your Feedback</a><br/>
+      </div>
+    </div>
+      <div className="row">
+      <div className="col">
+      <p className="text-center"> Copyright &copy; All Right Reserved</p> 
+      </div>
+      </div>
+    </div>
+    
+    </div>
+    
+  );
+};
 
-export default Footer
+export default Footer;

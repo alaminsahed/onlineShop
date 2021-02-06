@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
+import css from "../components/css/Nav.css";
 
 const CartScreen = ({ match, location, history }) => {
   const productId = match.params.id
@@ -32,7 +33,7 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Shopping Cart</h1>
+        <h1>MY Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty <Link to='/'>Go Back</Link>
@@ -69,10 +70,10 @@ const CartScreen = ({ match, location, history }) => {
                   <Col md={2}>
                     <Button
                       type='button'
-                      variant='light'
+                      variant='dark'
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <i className='fas fa-trash'></i>
+                      <i className='fas fa-trash trash-icon'></i>
                     </Button>
                   </Col>
                 </Row>
@@ -84,24 +85,25 @@ const CartScreen = ({ match, location, history }) => {
       <Col md={4}>
         <Card>
           <ListGroup variant='flush'>
-            <ListGroup.Item>
-              <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
-              </h2>
-              $
-              {cartItems
+            <ListGroup.Item className="cart-header">
+              <h3>
+               Checkout Summary
+              </h3>
+              </ListGroup.Item>
+              <ListGroup.Item>
+              <h5>Items: {cartItems.reduce((acc, item) => acc + item.qty, 0)}</h5>
+              <h5>Subtotal: $ {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
-                .toFixed(2)}
+                .toFixed(0)}</h5>
             </ListGroup.Item>
             <ListGroup.Item>
               <Button
                 type='button'
-                className='btn-block'
+                className='btn-block btn btn-success btn-cart'
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed To Checkout
+                Go to shipping page
               </Button>
             </ListGroup.Item>
           </ListGroup>

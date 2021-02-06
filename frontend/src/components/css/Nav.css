@@ -1,0 +1,84 @@
+/* NavBar */
+header{
+    box-shadow:  0px 5px 5px -3px rgba(50, 50, 93, 0.25);   
+}
+
+/* searchbox */
+
+.search-btn{
+    color: tomato; 
+}
+.search-form{
+    border: 1px solid tomato;
+    border-radius: 3%;
+}
+
+/* Product */
+
+.home-card{
+    border: 1px solid green;
+}
+
+.card-btn:hover{
+    background-color: grey;
+}
+
+.footer{
+    border-top-width:5px;  
+    border-top-style:groove;
+}
+
+/* product screen */
+
+.cart-button:hover{
+    color: black;
+    background-color: tomato;
+}
+
+.review-section{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.show-review{
+   background-color: grey;
+   color:white;
+   padding: 10px;
+   
+}
+
+.accordion-header{
+    background-color: grey;
+}
+
+/* cart Screen */
+
+.trash-icon{
+    color: red;
+}
+
+.cart-header{
+    background-color: grey;
+    color:white;
+}
+
+.btn-cart:hover{
+     background-color:tomato;
+}
+
+/* login screen */
+
+.signin-btn:hover{
+    background-color: tomato;
+}
+
+/* payment screen */
+
+.payment-header{
+    background-color: grey;
+    color: white;
+}
+
+.payment-container{
+    margin-top: 100px;
+}

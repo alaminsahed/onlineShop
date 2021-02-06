@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Card } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 import Rating from './Rating'
+import css from './css/Nav.css'
 
 const Product = ({ product }) => {
   return (
-    <Card className='my-3 p-3 rounded'>
+    <Card className='my-3 p-3 rounded home-card'>
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant='top' />
       </Link>
@@ -26,6 +27,7 @@ const Product = ({ product }) => {
 
         <Card.Text as='h3'>${product.price}</Card.Text>
       </Card.Body>
+      <Button variant="success" className="card-btn"><Link  to={`/product/${product._id}`}>Details</Link></Button>
     </Card>
   )
 }
