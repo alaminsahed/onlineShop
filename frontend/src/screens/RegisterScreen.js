@@ -91,7 +91,7 @@ const RegisterScreen = ({ location, history }) => {
           {loading && <Loader />}
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label><i class="fas fa-user"></i> Name</Form.Label>
+              <Form.Label><i className="fas fa-user"></i> Name</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -101,7 +101,7 @@ const RegisterScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId="email">
-              <Form.Label><i class="fas fa-envelope-square"></i> Email Address</Form.Label>
+              <Form.Label><i className="fas fa-envelope-square"></i> Email Address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter email"
@@ -111,7 +111,7 @@ const RegisterScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId="password">
-              <Form.Label><i class="fas fa-unlock-alt"></i> Password</Form.Label>
+              <Form.Label><i className="fas fa-unlock-alt"></i> Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Enter password"
@@ -121,7 +121,7 @@ const RegisterScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId="confirmPassword">
-              <Form.Label><i class="fas fa-check-circle"></i> Confirm Password</Form.Label>
+              <Form.Label><i className="fas fa-check-circle"></i> Confirm Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Confirm password"

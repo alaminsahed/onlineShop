@@ -17,6 +17,7 @@ header{
 
 .home-card{
     border: 1px solid green;
+    height: 30rem;
 }
 
 .card-btn:hover{
@@ -120,4 +121,27 @@ header{
 .order-id{
     background-color: rgb(19, 231, 125);
     padding: 10px;
+}
+
+/* contact screen */
+
+.contact-header{
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-end{
+    background-color: rgb(7, 100, 19);
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 80px;
+}
+
+.contact-end h6{
+   
+    color: white;
+ 
 }
