@@ -131,7 +131,7 @@ header{
 }
 
 .contact-end{
-    background-color: rgb(7, 100, 19);
+    background-color:#2c365d;
     margin: 20px;
     padding: 10px;
     color: white;
@@ -144,4 +144,71 @@ header{
    
     color: white;
  
+}
+
+/* Profile screen */
+
+.profile-section{
+    background-color: #272343;
+    color: white;
+    border-radius: 10px;
+}
+
+.profile-section h2{
+    color: white;
+}
+
+/* .order-section th{
+    background-color:#b68973;
+    color: white;
+} */
+
+/* user list screen */
+
+/* .userlist th{
+    background-color: #b68973 ;
+    color: white;
+} */
+
+/* user edit screen */
+
+.editscreen{
+    background-color: #272343;
+    border: 5px solid sienna;
+    color: white;
+}
+
+.back-btn{
+    border: 1px solid green;
+    background-color: greenyellow;
+    margin: 10px;
+}
+
+.back-btn:hover{
+    background-color: tomato;
+}
+
+.editscreen h1{
+    color: white;
+}
+
+/* product list screen */
+
+.btn-add button{
+    background-color: yellowgreen;
+}
+
+.btn-add button:hover{
+    background-color: tomato;
+}
+
+.product-list{
+    background-color: #272343;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.user-edit a{
+    color: white;
 }

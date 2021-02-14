@@ -4,9 +4,11 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import css from '../components/css/Nav.css'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
 import { listMyOrders } from '../actions/orderActions'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
+
 
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState('')
@@ -55,7 +57,7 @@ const ProfileScreen = ({ location, history }) => {
 
   return (
     <Row>
-      <Col md={3}>
+      <Col md={3} className="profile-section">
         <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
         {}
@@ -65,6 +67,7 @@ const ProfileScreen = ({ location, history }) => {
         ) : error ? (
           <Message variant='danger'>{error}</Message>
         ) : (
+
           <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
               <Form.Label>Name</Form.Label>
@@ -106,28 +109,30 @@ const ProfileScreen = ({ location, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
-              Update
-            </Button>
+            <Button type="submit" variant="success" className="signin-btn" block>
+            Update
+          </Button>
           </Form>
         )}
+        <br></br>
+
       </Col>
-      <Col md={9}>
-        <h2>My Orders</h2>
+      <Col md={9} className="order-section">
+        <h2>Orders History</h2>
         {loadingOrders ? (
           <Loader />
         ) : errorOrders ? (
           <Message variant='danger'>{errorOrders}</Message>
         ) : (
-          <Table striped bordered hover responsive className='table-sm'>
+          <Table  className='table-sm profile-section'>
             <thead>
               <tr>
-                <th>ID</th>
-                <th>DATE</th>
-                <th>TOTAL</th>
-                <th>PAID</th>
-                <th>DELIVERED</th>
-                <th></th>
+                <th>Product ID</th>
+                <th>Order DATE</th>
+                <th>TOTAL Payment</th>
+                <th>Payment Date</th>
+                <th>DELIVERY status</th>
+                <th>Details</th>
               </tr>
             </thead>
             <tbody>
@@ -152,7 +157,7 @@ const ProfileScreen = ({ location, history }) => {
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
-                      <Button className='btn-sm' variant='light'>
+                      <Button  variant="success" className="signin-btn">
                         Details
                       </Button>
                     </LinkContainer>

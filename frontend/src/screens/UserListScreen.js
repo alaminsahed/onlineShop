@@ -4,6 +4,7 @@ import { Table, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import css from '../components/css/Nav.css'
 import { listUsers, deleteUser } from '../actions/userActions'
 
 const UserListScreen = ({ history }) => {
@@ -34,16 +35,16 @@ const UserListScreen = ({ history }) => {
 
   return (
     <>
-      <h1>Users</h1>
+      <h1>Users Information</h1>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Table striped bordered hover responsive className='table-sm'>
+        <Table striped bordered hover responsive className='table-sm product-list'>
           <thead>
             <tr>
-              <th>ID</th>
+              <th>Product ID</th>
               <th>NAME</th>
               <th>EMAIL</th>
               <th>ADMIN</th>
@@ -55,7 +56,7 @@ const UserListScreen = ({ history }) => {
               <tr key={user._id}>
                 <td>{user._id}</td>
                 <td>{user.name}</td>
-                <td>
+                <td className="user-edit">
                   <a href={`mailto:${user.email}`}>{user.email}</a>
                 </td>
                 <td>

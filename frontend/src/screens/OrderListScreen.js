@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { listOrders } from '../actions/orderActions'
+import css from '../components/css/Nav.css'
 
 const OrderListScreen = ({ history }) => {
   const dispatch = useDispatch()
@@ -31,7 +32,7 @@ const OrderListScreen = ({ history }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Table striped bordered hover responsive className='table-sm'>
+        <Table className='table-sm product-list'>
           <thead>
             <tr>
               <th>ID</th>
@@ -66,7 +67,7 @@ const OrderListScreen = ({ history }) => {
                 </td>
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
-                    <Button variant='light' className='btn-sm'>
+                    <Button variant='success' className='btn-sm signin-btn'>
                       Details
                     </Button>
                   </LinkContainer>

@@ -11,6 +11,7 @@ import {
   createProduct,
 } from '../actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
+import css from '../components/css/Nav.css'
 
 const ProductListScreen = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1
@@ -71,12 +72,12 @@ const ProductListScreen = ({ history, match }) => {
   }
 
   return (
-    <>
+    <div className="">
       <Row className='align-items-center'>
         <Col>
           <h1>Products</h1>
         </Col>
-        <Col className='text-right'>
+        <Col className='text-right btn-add'>
           <Button className='my-3' onClick={createProductHandler}>
             <i className='fas fa-plus'></i> Create Product
           </Button>
@@ -92,7 +93,7 @@ const ProductListScreen = ({ history, match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
-          <Table striped bordered hover responsive className='table-sm'>
+          <Table  className='table-sm product-list'>
             <thead>
               <tr>
                 <th>ID</th>
@@ -132,7 +133,7 @@ const ProductListScreen = ({ history, match }) => {
           <Paginate pages={pages} page={page} isAdmin={true} />
         </>
       )}
-    </>
+    </div>
   )
 }
 

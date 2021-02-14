@@ -8,6 +8,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
+import css from '../components/css/Nav.css'
 
 const ProductEditScreen = ({ match, history }) => {
   const productId = match.params.id
@@ -92,12 +93,12 @@ const ProductEditScreen = ({ match, history }) => {
   }
 
   return (
-    <>
-      <Link to='/admin/productlist' className='btn btn-light my-3'>
+    <div className="editscreen">
+      <Link to='/admin/productlist' className='btn btn-light my-3 back-btn'>
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>Update Product</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -183,13 +184,15 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
-              Update
+            <Button  variant="success" className="signin-btn">
+               Upadate
             </Button>
           </Form>
         )}
       </FormContainer>
-    </>
+      <br/> 
+      <br/>
+    </div>
   )
 }
 

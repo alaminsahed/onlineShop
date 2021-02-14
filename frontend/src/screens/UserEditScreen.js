@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { getUserDetails, updateUser } from '../actions/userActions'
 import { USER_UPDATE_RESET } from '../constants/userConstants'
+import css from '../components/css/Nav.css'
 
 const UserEditScreen = ({ match, history }) => {
   const userId = match.params.id
@@ -48,12 +49,12 @@ const UserEditScreen = ({ match, history }) => {
   }
 
   return (
-    <>
-      <Link to='/admin/userlist' className='btn btn-light my-3'>
+    <div className="editscreen">
+      <Link to='/admin/userlist' className='btn btn-light my-3 back-btn'>
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit User</h1>
+        <h1>Edit User Information</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -85,19 +86,21 @@ const UserEditScreen = ({ match, history }) => {
             <Form.Group controlId='isadmin'>
               <Form.Check
                 type='checkbox'
-                label='Is Admin'
+                label='Select as Admin'
                 checked={isAdmin}
                 onChange={(e) => setIsAdmin(e.target.checked)}
               ></Form.Check>
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
-              Update
-            </Button>
+            <Button type="submit" variant="success" className="signin-btn" block>
+            Update
+          </Button>
           </Form>
         )}
       </FormContainer>
-    </>
+      <br/>
+      <br/>
+    </div>
   )
 }
 
