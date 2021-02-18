@@ -114,6 +114,6 @@ Admin: Email: admin@gmail.com  Password: 123456</br>
 <b>Purpose: </b> I developed this project on learning purpose. 
 
 
-<b>Temporary Issue:</b> Get uncommon error on deploying (heroku). Usual expected answer don't work. Slove the issue soon.
+
 
 
