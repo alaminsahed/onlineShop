@@ -27,6 +27,7 @@ const Footer = () => {
       <a href="/" style={{color:"black"}}>Send Your Feedback</a><br/>
       </div>
     </div>
+    <br/>
       <div className="row">
       <div className="col">
       <p className="text-center"> Copyright &copy; All Right Reserved</p> 
