@@ -101,7 +101,7 @@ Admin: Email: admin@gmail.com  Password: 123456</br>
 </br></br>
 [![update-add-admin.png](https://i.postimg.cc/mgBWP3L6/update-add-admin.png)](https://postimg.cc/ppG67FnD)
 </br></br>
-<b>Admin Add New Admin:  </b>Admin Add Product
+<b>Admin Add Product:  </b>Admin can add new products and update product information.
 </br></br>
 [![update-add-product.png](https://i.postimg.cc/vZcLLkZ1/update-add-product.png)](https://postimg.cc/TKvDTkmG)
 </br></br>
