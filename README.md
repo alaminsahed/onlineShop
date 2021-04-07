@@ -111,7 +111,11 @@ Admin: Email: admin@gmail.com  Password: 123456</br>
 <b>Key learning: </b> Redux, Redux-thunk, Middleware, JWT, MongoDB </br></br>
 
 
-<b>Purpose: </b> I developed this project on learning purpose. 
+<b>Purpose: </b> learning purpose. 
+
+<b>Uniqness:</b> Frontend Design & content.
+
+<b>Inspired By:</b> Traversy Media.
 
 
 
