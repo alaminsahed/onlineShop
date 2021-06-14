@@ -115,7 +115,7 @@ Admin: Email: admin@gmail.com  Password: 123456</br>
 
 <b>Uniqness:</b> Frontend Design & content.
 
-<b>Inspired By:</b> Traversy Media.
+
 
 
 
