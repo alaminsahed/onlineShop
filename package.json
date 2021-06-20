@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/alaminsahed/onlineShop#readme",
   "dependencies": {
+    "autoprefixer": "^10.2.6",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
