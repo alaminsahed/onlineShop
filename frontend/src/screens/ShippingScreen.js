@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
-import { saveShippingAddress } from "../actions/cartActions";
+import { saveShippingAddress } from "../Actions/cartActions";
 import delivery from "../image/delivery.png";
 import css from "../components/css/Nav.css";
 
