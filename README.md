@@ -115,9 +115,9 @@ Admin: Email: admin@gmail.com  Password: 123456</br>
 
 <b>Uniqness:</b> Frontend Design & content.
 
-<b>improvement opportunity:</b> 
+<b>Improvement opportunity:</b> 
 * I use old redux method here. Redux created so many complexity and it is so time consuming for the boilerplate code. I will do it for learnnig but `context api` can nicely handel the state or I will love to use `redux tool kit` next of my projects. 
-* Cuopn is very important part of any Ecommerce for imporve their marketing process. I will like to add cupon managment system in the next version.
+* Coupon is very important part of any Ecommerce for imporve their marketing process. I will like to add cupon managment system in the next version.
 * Create bluk action for admin is also important part of Admin pannel. It should be added in the next.
 * Product life cycle is important for analytcis the businness growth. It also in my next to do plan list.
 
