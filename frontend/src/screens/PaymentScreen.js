@@ -3,7 +3,7 @@ import { Form, Button, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import { savePaymentMethod } from '../Actions/cartActions'
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 const PaymentScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart)

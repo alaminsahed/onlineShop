@@ -9,9 +9,9 @@ import {
   listProducts,
   deleteProduct,
   createProduct,
-} from '../actions/productActions'
+} from '../Actions/ProductActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
-import css from '../components/css/Nav.css'
+import '../components/css/Nav.css'
 
 const ProductListScreen = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1

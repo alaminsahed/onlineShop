@@ -10,12 +10,12 @@ import {
   getOrderDetails,
   payOrder,
   deliverOrder,
-} from "../actions/orderActions";
+} from "../Actions/orderActions";
 import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from "../constants/orderConstants";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
@@ -76,6 +76,7 @@ const OrderScreen = ({ match, history }) => {
         setSdkReady(true);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, orderId, successPay, successDeliver, order]);
 
   const successPaymentHandler = (paymentResult) => {

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
-import { createOrder } from "../actions/orderActions";
+import { createOrder } from "../Actions/orderActions";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 import { USER_DETAILS_RESET } from "../constants/userConstants";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();

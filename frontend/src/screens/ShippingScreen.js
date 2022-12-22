@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
 import { saveShippingAddress } from "../Actions/cartActions";
 import delivery from "../image/delivery.png";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 
 const ShippingScreen = ({ history }) => {

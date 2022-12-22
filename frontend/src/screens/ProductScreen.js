@@ -18,9 +18,9 @@ import Meta from "../components/Meta";
 import {
   listProductDetails,
   createProductReview,
-} from "../actions/productActions";
+} from "../Actions/ProductActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
@@ -51,6 +51,7 @@ const ProductScreen = ({ history, match }) => {
       dispatch(listProductDetails(match.params.id));
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, match, successProductReview]);
 
   const addToCartHandler = () => {

@@ -4,8 +4,8 @@ import { Table, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import { listOrders } from '../actions/orderActions'
-import css from '../components/css/Nav.css'
+import { listOrders } from '../Actions/orderActions'
+import '../components/css/Nav.css'
 
 const OrderListScreen = ({ history }) => {
   const dispatch = useDispatch()

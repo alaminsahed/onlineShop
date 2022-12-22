@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Card } from 'react-bootstrap'
 import Rating from './Rating'
-import css from './css/Nav.css'
+import './css/Nav.css'
 
 const Product = ({ product }) => {
   return (
