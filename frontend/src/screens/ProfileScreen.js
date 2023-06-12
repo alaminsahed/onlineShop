@@ -4,9 +4,9 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import css from '../components/css/Nav.css'
-import { getUserDetails, updateUserProfile } from '../Actions/userActions'
-import { listMyOrders } from '../Actions/orderActions'
+import '../components/css/Nav.css'
+import { getUserDetails, updateUserProfile } from '../actions/userActions'
+import { listMyOrders } from '../actions/orderActions'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
 
@@ -60,7 +60,7 @@ const ProfileScreen = ({ location, history }) => {
       <Col md={3} className="profile-section">
         <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
-        {}
+        { }
         {success && <Message variant='success'>Profile Updated</Message>}
         {loading ? (
           <Loader />
@@ -110,8 +110,8 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Button type="submit" variant="success" className="signin-btn" block>
-            Update
-          </Button>
+              Update
+            </Button>
           </Form>
         )}
         <br></br>
@@ -124,7 +124,7 @@ const ProfileScreen = ({ location, history }) => {
         ) : errorOrders ? (
           <Message variant='danger'>{errorOrders}</Message>
         ) : (
-          <Table  className='table-sm profile-section'>
+          <Table className='table-sm profile-section'>
             <thead>
               <tr>
                 <th>Product ID</th>
@@ -157,7 +157,7 @@ const ProfileScreen = ({ location, history }) => {
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
-                      <Button  variant="success" className="signin-btn">
+                      <Button variant="success" className="signin-btn">
                         Details
                       </Button>
                     </LinkContainer>

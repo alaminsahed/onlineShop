@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
-import { saveShippingAddress } from "../Actions/cartActions";
+import { saveShippingAddress } from "../actions/cartActions";
 import delivery from "../image/delivery.png";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 
 const ShippingScreen = ({ history }) => {
@@ -27,7 +27,7 @@ const ShippingScreen = ({ history }) => {
   return (
     <Row>
       <Col md={4}>
-        <img src={delivery} className="d-block w-100" height="400px"  alt="delivery-img" />
+        <img src={delivery} className="d-block w-100" height="400px" alt="delivery-img" />
       </Col>
       <Col md={8}>
         <FormContainer>

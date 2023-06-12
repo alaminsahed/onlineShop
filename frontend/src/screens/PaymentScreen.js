@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Form, Button, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
-import { savePaymentMethod } from '../Actions/cartActions'
-import css from "../components/css/Nav.css";
+import { savePaymentMethod } from '../actions/cartActions'
+import "../components/css/Nav.css";
 
 const PaymentScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart)
@@ -25,11 +25,11 @@ const PaymentScreen = ({ history }) => {
 
   return (
     <FormContainer>
-      
-     
+
+
       <Form onSubmit={submitHandler}>
-        <Form.Group  className="payment-container">
-          <Form.Label as='legend' className="payment-header"><h3 style={{padding:"15px"}}>Select Payment Method</h3></Form.Label>
+        <Form.Group className="payment-container">
+          <Form.Label as='legend' className="payment-header"><h3 style={{ padding: "15px" }}>Select Payment Method</h3></Form.Label>
           <Col>
             <Form.Check
               type='radio'
@@ -52,8 +52,8 @@ const PaymentScreen = ({ history }) => {
         </Form.Group>
 
         <Button type="submit" variant="success" className="signin-btn" block>
-        Continue
-      </Button>
+          Continue
+        </Button>
       </Form>
     </FormContainer>
   )

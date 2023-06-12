@@ -20,7 +20,7 @@ import {
   createProductReview,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
@@ -169,14 +169,14 @@ const ProductScreen = ({ history, match }) => {
                 <Card>
                   <Card.Header className="accordion-header">
                     <Accordion.Toggle as={Button} variant="link" eventKey="0" className="btn btn-success">
-                    <b>Write Your Review</b>
+                      <b>Write Your Review</b>
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
                       <ListGroup>
                         <ListGroup.Item>
-                          
+
                           {successProductReview && (
                             <Message variant="success">
                               Review submitted successfully
