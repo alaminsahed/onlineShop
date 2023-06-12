@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
-import { addToCart, removeFromCart } from '../Actions/cartActions'
+import { addToCart, removeFromCart } from '../actions/cartActions'
 import css from "../components/css/Nav.css";
 
 const CartScreen = ({ match, location, history }) => {
@@ -87,10 +87,10 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant='flush'>
             <ListGroup.Item className="cart-header">
               <h3>
-               Checkout Summary
+                Checkout Summary
               </h3>
-              </ListGroup.Item>
-              <ListGroup.Item>
+            </ListGroup.Item>
+            <ListGroup.Item>
               <h5>Items: {cartItems.reduce((acc, item) => acc + item.qty, 0)}</h5>
               <h5>Subtotal: $ {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)

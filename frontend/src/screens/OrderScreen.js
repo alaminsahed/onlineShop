@@ -15,7 +15,7 @@ import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from "../constants/orderConstants";
-import css from "../components/css/Nav.css";
+import "../components/css/Nav.css";
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
@@ -97,86 +97,86 @@ const OrderScreen = ({ match, history }) => {
       <Row>
         <Col md={8}>
           <ListGroup variant="flush">
-          <ListGroup.Item className="item-section">
-          <h2 className="item-header" style={{color:"white"}}>Order Items</h2>
-          {order.orderItems.length === 0 ? (
-            <Message>Order is empty</Message>
-          ) : (
-            <ListGroup variant="flush">
-              {order.orderItems.map((item, index) => (
-                <ListGroup.Item key={index}>
-                  <Row>
-                    <Col md={1}>
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fluid
-                        rounded
-                      />
-                    </Col>
-                    <Col>
-                      <Link to={`/product/${item.product}`}>
-                        {item.name}
-                      </Link>
-                    </Col>
-                    <Col md={4}>
-                      {item.qty} x ${item.price} = ${item.qty * item.price}
-                    </Col>
-                  </Row>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          )}
-        </ListGroup.Item>
-            <Row className="shipping-section">
-              <Col>
-              <ListGroup.Item>
-              <h2 className="shipping" style={{color:"white"}}>Shipping Info</h2>
-              <p>
-                <strong>Name: </strong> {order.user.name}
-              </p>
-              <p>
-                <strong>Email: </strong>{" "}
-                <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
-              </p>
-              <p>
-                <strong>Address:</strong>
-                {order.shippingAddress.address}, {order.shippingAddress.city}{" "}
-                {order.shippingAddress.postalCode},{" "}
-                {order.shippingAddress.country}
-              </p>
-              <p>Delivery Status: </p>
-              {order.isDelivered ? (
-                <Message variant="success">
-                  Delivered on {order.deliveredAt}
-                </Message>
+            <ListGroup.Item className="item-section">
+              <h2 className="item-header" style={{ color: "white" }}>Order Items</h2>
+              {order.orderItems.length === 0 ? (
+                <Message>Order is empty</Message>
               ) : (
-                <Message variant="danger">Not Delivered</Message>
+                <ListGroup variant="flush">
+                  {order.orderItems.map((item, index) => (
+                    <ListGroup.Item key={index}>
+                      <Row>
+                        <Col md={1}>
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fluid
+                            rounded
+                          />
+                        </Col>
+                        <Col>
+                          <Link to={`/product/${item.product}`}>
+                            {item.name}
+                          </Link>
+                        </Col>
+                        <Col md={4}>
+                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                        </Col>
+                      </Row>
+                    </ListGroup.Item>
+                  ))}
+                </ListGroup>
               )}
             </ListGroup.Item>
+            <Row className="shipping-section">
+              <Col>
+                <ListGroup.Item>
+                  <h2 className="shipping" style={{ color: "white" }}>Shipping Info</h2>
+                  <p>
+                    <strong>Name: </strong> {order.user.name}
+                  </p>
+                  <p>
+                    <strong>Email: </strong>{" "}
+                    <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                  </p>
+                  <p>
+                    <strong>Address:</strong>
+                    {order.shippingAddress.address}, {order.shippingAddress.city}{" "}
+                    {order.shippingAddress.postalCode},{" "}
+                    {order.shippingAddress.country}
+                  </p>
+                  <p>Delivery Status: </p>
+                  {order.isDelivered ? (
+                    <Message variant="success">
+                      Delivered on {order.deliveredAt}
+                    </Message>
+                  ) : (
+                    <Message variant="danger">Not Delivered</Message>
+                  )}
+                </ListGroup.Item>
 
-              
+
               </Col>
               <Col>
-                
-            <ListGroup.Item>
-            <h2 className="payment" style={{color:"white"}}>Payment info</h2>
-            <p>
-              <strong>Method: </strong>
-              {order.paymentMethod}
-            </p>
-            <p>Payment Status: </p>
-            {order.isPaid ? (
-              <Message variant="success">Paid on {order.paidAt}</Message>
-            ) : (
-              <Message variant="danger">Not Paid</Message>
-            )}
-          </ListGroup.Item>
+
+                <ListGroup.Item>
+                  <h2 className="payment" style={{ color: "white" }}>Payment info</h2>
+                  <p>
+                    <strong>Method: </strong>
+                    {order.paymentMethod}
+                  </p>
+                  <p>Payment Status: </p>
+                  {order.isPaid ? (
+                    <Message variant="success">Paid on {order.paidAt}</Message>
+                  ) : (
+                    <Message variant="danger">Not Paid</Message>
+                  )}
+                </ListGroup.Item>
 
               </Col>
             </Row>
-          
-           
+
+
           </ListGroup>
         </Col>
         <Col md={4}>
