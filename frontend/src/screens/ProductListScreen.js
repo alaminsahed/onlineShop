@@ -11,7 +11,7 @@ import {
   createProduct,
 } from '../actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
-import css from '../components/css/Nav.css'
+import '../components/css/Nav.css'
 
 const ProductListScreen = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1
@@ -93,7 +93,7 @@ const ProductListScreen = ({ history, match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
-          <Table  className='table-sm product-list'>
+          <Table className='table-sm product-list'>
             <thead>
               <tr>
                 <th>ID</th>
