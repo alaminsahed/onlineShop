@@ -5,7 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import SearchBox from "./SearchBox";
 import { logout } from "../actions/userActions";
-import css from "./css/Nav.css";
+import "./css/Nav.css";
 import logo from "../image/logo3.png"
 
 const Header = () => {
@@ -36,12 +36,12 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Route render={({ history }) => <SearchBox history={history} />} />
-            <Nav className="ml-auto">
-            <LinkContainer to="/">
-            <Nav.Link>
-              <i className="fas fa-home"></i> home
-            </Nav.Link>
-          </LinkContainer>
+            <Nav className="mr-auto">
+              <LinkContainer to="/">
+                <Nav.Link>
+                  <i className="fas fa-home"></i> home
+                </Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/cart">
                 <Nav.Link>
                   <i className="fas fa-shopping-cart"></i> Cart

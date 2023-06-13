@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
-import css from './css/Nav.css'
+import './css/Nav.css'
 
 const SearchBox = ({ history }) => {
   const [keyword, setKeyword] = useState('')
@@ -21,10 +21,10 @@ const SearchBox = ({ history }) => {
         name='q'
         onChange={(e) => setKeyword(e.target.value)}
         placeholder='Search here...'
-        className='mr-sm-2 ml-sm-5 search-form'
+        className='mr-sm-2 ml-sm-5 search-form w-50'
       ></Form.Control>
-      <Button type='submit' variant='outline-danger' className='p-2 search-btn'>
-      <i className="fas fa-search"></i> search
+      <Button type='submit' variant='outline-danger' className='p-2 m-2 search-btn'>
+        <i className="fas fa-search"></i> search
       </Button>
     </Form>
   )
